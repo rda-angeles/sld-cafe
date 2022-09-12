@@ -1,5 +1,15 @@
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Socials from "./components/Socials";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Socials />
+    </>
+  );
 }
 
 export default App;
