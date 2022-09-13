@@ -15,8 +15,6 @@
   * {
     padding: 0;
     margin: 0;
-    /* background-color: var(--c-black); */
-    color: var(--c-white);
     font-family: "Montserrat", sans-serif;
   }
 
@@ -33,5 +31,19 @@
     height: 100%;
     background-color: var(--c-black);
     opacity: 0.6;
+  }
+
+  .title-snippet {
+    display: inline-block;
+  }
+
+  .title-snippet::before {
+    position: absolute;
+    content: "";
+    height: 0.2rem;
+    width: 1rem;
+    right: -1.2rem;
+    top: 50%;
+    transform: translate(-0%, -50%);
   }
 }

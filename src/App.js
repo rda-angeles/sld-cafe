@@ -1,13 +1,19 @@
+import About from "./components/About";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
-import Socials from "./components/Socials";
+import Services from "./components/Services";
 
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
-      <Socials />
+      <About />
+      <Services />
+      {/* <Menu /> */}
+      <Footer />
     </>
   );
 }
