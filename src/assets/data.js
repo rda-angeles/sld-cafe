@@ -80,14 +80,6 @@ export const menuInfo = [
 export const popularMenus = [
   {
     id: 1,
-    menu: "Cappuccino",
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, neque. ",
-    price: "180php",
-    img: `${Cappuccino}`,
-  },
-  {
-    id: 2,
     menu: "Nikko's Special Coffee ",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, neque. ",
@@ -95,13 +87,24 @@ export const popularMenus = [
     img: `${NikkoSpecial}`,
   },
   {
-    id: 3,
+    id: 2,
     menu: "Lord's Special Coffee",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, neque. ",
     price: "250php",
     img: `${LordSpecial}`,
   },
+  {
+    id: 3,
+    menu: "Robert's Special Coffee",
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, neque. ",
+    price: "250php",
+    img: `${RobertSpecial}`,
+  },
+];
+
+export const todaySpecial = [
   {
     id: 4,
     menu: "Rea's Special Coffee",
@@ -112,18 +115,18 @@ export const popularMenus = [
   },
   {
     id: 5,
-    menu: "Robert's Special Coffee",
+    menu: "Latte ",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, neque. ",
     price: "250php",
-    img: `${RobertSpecial}`,
+    img: `${Latte}`,
   },
   {
-    id: 5,
-    menu: "Hot Latte",
+    id: 6,
+    menu: "Capuccino",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, neque. ",
-    price: "180php",
-    img: `${Latte}`,
+    price: "250php",
+    img: `${Cappuccino}`,
   },
 ];

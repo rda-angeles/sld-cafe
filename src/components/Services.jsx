@@ -3,8 +3,8 @@ import { servicesInfo, servicesIcons } from "../assets/data";
 
 const Services = () => {
   return (
-    <div>
-      <div className="max-w-5xl mx-auto pb-10 items-center flex flex-col lg:flex-row text-c-black text-center md:text-left md:mt-12 ">
+    <div className=" lg:py-12">
+      <div className="max-w-5xl mx-auto items-center flex flex-col lg:flex-row text-c-black text-center md:text-left md:mt-12 ">
         {/* Icons */}
         <div className="order-2  p-5 bg-c-primary w-full text-c-white flex flex-wrap justify-center ">
           {servicesIcons.map((icons) => (

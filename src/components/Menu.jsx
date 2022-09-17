@@ -1,5 +1,6 @@
 import React from "react";
-import { menuInfo, popularMenus } from "../assets/data";
+import { menuInfo, popularMenus,todaySpecial } from "../assets/data";
+import { BsChevronRight } from "react-icons/bs";
 const Menu = () => {
   return (
     <div className="bg-c-secondary text-c-white px-4 py-12">
@@ -25,22 +26,78 @@ const Menu = () => {
         <div className="text-center mt-8 text-c-black ">
           {/* Headline */}
           <div>
-            <h1 className="font-bold text-xl">Popular Menus</h1>
+            <h1 className="font-bold text-xl text-c-white text-center md:text-left mb-2">Popular Menus</h1>
+          </div>
+
+          {/* Menus */}
+          <div className="flex flex-col md:flex-row">
+            {popularMenus.map((menu) => (
+              <div className="bg-c-white rounded-md m-3 max-w-lg md:w-[15rem] lg:w-[20rem] mx-auto">
+                {/* Image wrapper */}
+                <div className="w-full h-[22rem] md:h-[17rem] lg:h-[20rem]">
+                  <img
+                    src={menu.img}
+                    className="object-cover w-full h-full rounded-tr-md rounded-tl-md"
+                    alt=""
+                  />
+                </div>
+
+                {/* Menu Content */}
+                <div className=" p-4">
+                  <h2 className="font-bold font-secondary text-2xl">
+                    {menu.menu}
+                  </h2>
+                  <p className="text-sm py-4">{menu.shortDesc}</p>
+
+                  <div>
+                    <button className="group rounded-md py-3 px-5 border-[.1rem] border-c-white border-solid flex bg-c-tertiary items-center duration-300 mx-auto hover:bg-c-primary font-bold hover:border-c-primary hover:text-c-white ">
+                      Order Now
+                      <span className="ml-2 group-hover:rotate-90 duration-300">
+                        <BsChevronRight />
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Today Specials */}
+        <div className="text-center mt-8 text-c-black ">
+          {/* Headline */}
+          <div>
+            <h1 className="font-bold text-xl text-c-white text-center md:text-left mb-2">Today's Special</h1>
           </div>
 
           {/* Menus */}
           <div className="flex flex-wrap">
-            {popularMenus.map((menu) => (
-              <div className="bg-c-white rounded-md m-3 h-[40rem]">
+            {todaySpecial.map((menu) => (
+              <div className="bg-c-white rounded-md m-3 max-w-lg md:w-[15rem] lg:w-[20rem] mx-auto">
                 {/* Image wrapper */}
-                <div className="w-full h-[10rem] ">
-                  <img src={menu.img} className="object-cover" alt="" />
+                <div className="w-full h-[22rem] md:h-[17rem] lg:h-[20rem]">
+                  <img
+                    src={menu.img}
+                    className="object-cover w-full h-full rounded-tr-md rounded-tl-md"
+                    alt=""
+                  />
                 </div>
 
                 {/* Menu Content */}
-                <div className="h-20 p-4">
-                  <h2>{menu.menu}</h2>
-                  <h4>{menu.shortDesc}</h4>
+                <div className="p-4">
+                  <h2 className="font-bold font-secondary text-2xl">
+                    {menu.menu}
+                  </h2>
+                  <p className="text-sm py-4">{menu.shortDesc}</p>
+
+                  <div>
+                    <button className="group rounded-md py-3 px-5 border-[.1rem] border-c-white border-solid flex bg-c-tertiary items-center duration-300 mx-auto hover:bg-c-primary font-bold hover:border-c-primary hover:text-c-white ">
+                      Order Now
+                      <span className="ml-2 group-hover:rotate-90 duration-300">
+                        <BsChevronRight />
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}

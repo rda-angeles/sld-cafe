@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 function Navbar() {
   const links = [
@@ -21,13 +21,28 @@ function Navbar() {
   ];
 
   const [nav, setNav] = useState(false);
+  const [navColor, setNavColor] = useState("transparent");
+
+  const listenScrollEvent = () => {
+    window.scrollY > 10 ? setNavColor("#222831") : setNavColor("transparent");
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
 
   return (
     // Navbar Wrapper
-    <div className=" fixed flex justify-between items-center w-full h-20 px-4 z-30 text-c-white">
+    <div
+      className=" fixed flex justify-between items-center w-full h-20 px-4 z-30 text-c-white"
+      style={{ backgroundColor: navColor, transition: "all .3s" }}
+    >
       {/* Medium to Larger Device */}
 
-      <div className="flex justify-between items-center w-full mx-auto lg:max-w-[102rem]">
+      <div className="flex justify-between items-center w-full mx-auto container max-w-7xl">
         {/* Logo/Name */}
         <div className="logo w-[8rem] h-[100%] cursor-pointer">
           <p className="text-center font-secondary text-xl">

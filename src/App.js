@@ -12,7 +12,7 @@ function App() {
       <Hero />
       <About />
       <Services />
-      {/* <Menu /> */}
+      <Menu />
       <Footer />
     </>
   );
